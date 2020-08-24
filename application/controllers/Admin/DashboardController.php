@@ -18,7 +18,7 @@ class DashboardController extends CI_Controller
 			$data = array(
 				'title' => "Dashboard"
 			);
-			$data['admin'] 			= $this->db->query("SELECT * FROM setting WHERE id= 1")->result();
+			// $data['admin'] 			= $this->db->query("SELECT * FROM setting WHERE id= 1")->result();
 			$this->load->view('pages/Admin/dashboard/index.php', $data);
 		} else {
 			redirect('/');

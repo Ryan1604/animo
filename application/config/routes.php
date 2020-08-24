@@ -58,50 +58,26 @@ $route['auth'] = 'Auth';
 // ------------------------------------------------------------------------
 $route['admin/dashboard']                                   = 'Admin/DashboardController';
 
-$route['admin/pegawai']                                     = 'Admin/PegawaiController';
-$route['admin/pegawai/create']                              = 'Admin/PegawaiController/create';
-$route['admin/pegawai/store']                               = 'Admin/PegawaiController/store';
-$route['admin/pegawai/edit/(:any)']                         = 'Admin/PegawaiController/edit/$1';
-$route['admin/pegawai/update']                              = 'Admin/PegawaiController/update';
-$route['admin/pegawai/delete/(:any)']                       = 'Admin/PegawaiController/delete/$1';
+$route['admin/peserta']                                     = 'Admin/PesertaController';
+$route['admin/peserta/add']                                 = 'Admin/PesertaController/add';
+$route['admin/peserta/find']                                = 'Admin/PesertaController/find';
+$route['admin/peserta/detail']                              = 'Admin/PesertaController/detail';
+$route['admin/peserta/update']                              = 'Admin/PesertaController/update';
+$route['admin/peserta/import']                              = 'Admin/PesertaController/import';
+$route['admin/peserta/print/(:any)']                        = 'Admin/PesertaController/print/$1';
 
-$route['admin/pedagang']                                    = 'Admin/PedagangController';
-$route['admin/pedagang/create']                             = 'Admin/PedagangController/create';
-$route['admin/pedagang/store']                              = 'Admin/PedagangController/store';
-$route['admin/pedagang/edit/(:any)']                        = 'Admin/PedagangController/edit/$1';
-$route['admin/pedagang/update']                             = 'Admin/PedagangController/update';
-$route['admin/pedagang/delete/(:any)']                      = 'Admin/PedagangController/delete/$1';
+// ------------------------------------------------------------------------
+// User
+// ------------------------------------------------------------------------
+$route['user/dashboard']                                   = 'User/DashboardController';
 
-$route['admin/setoran']                                     = 'Admin/SetoranController';
-$route['admin/setoran/create']                              = 'Admin/SetoranController/create';
-$route['admin/setoran/store']                               = 'Admin/SetoranController/store';
-$route['admin/setoran/edit/(:any)']                         = 'Admin/SetoranController/edit/$1';
-$route['admin/setoran/update']                              = 'Admin/SetoranController/update';
-$route['admin/setoran/delete/(:any)']                       = 'Admin/SetoranController/delete/$1';
-$route['admin/setoran/search']                              = 'Admin/SetoranController/search';
-
-$route['admin/penunggakan']                                 = 'Admin/PenunggakanController';
-$route['admin/penunggakan/create']                          = 'Admin/PenunggakanController/create';
-$route['admin/penunggakan/store']                           = 'Admin/PenunggakanController/store';
-$route['admin/penunggakan/edit/(:any)']                     = 'Admin/PenunggakanController/edit/$1';
-$route['admin/penunggakan/update']                          = 'Admin/PenunggakanController/update';
-$route['admin/penunggakan/delete/(:any)']                   = 'Admin/PenunggakanController/delete/$1';
-$route['admin/penunggakan/search']                          = 'Admin/PenunggakanController/search';
-
-$route['admin/laporan/findSetoran']                         = 'Admin/LaporanController/findSetoran';
-$route['admin/laporan/findSetoran_']                        = 'Admin/LaporanController/findSetoran_';
-$route['admin/laporan/findPenunggakan']                     = 'Admin/LaporanController/findPenunggakan';
-$route['admin/laporan/findPenunggakan_']                    = 'Admin/LaporanController/findPenunggakan_';
-$route['admin/laporan/setoran']                             = 'Admin/LaporanController/setoran';
-$route['admin/laporan/print_setoran']                       = 'Admin/LaporanController/print_setoran';
-$route['admin/laporan/penunggakan']                         = 'Admin/LaporanController/penunggakan';
-$route['admin/laporan/print_penunggakan']                   = 'Admin/LaporanController/print_penunggakan';
-
-$route['admin/setting']                                     = 'Admin/SettingController';
-$route['admin/setting/update']                              = 'Admin/SettingController/update';
-
-$route['admin/harga_tempat']                                = 'Admin/HargaTempatController';
-$route['admin/harga_tempat/update']                         = 'Admin/HargaTempatController/update';
+$route['user/peserta']                                     = 'User/PesertaController';
+$route['user/peserta/add']                                 = 'User/PesertaController/add';
+$route['user/peserta/find']                                = 'User/PesertaController/find';
+$route['user/peserta/detail']                              = 'User/PesertaController/detail';
+$route['user/peserta/update']                              = 'User/PesertaController/update';
+$route['user/peserta/import']                              = 'User/PesertaController/import';
+$route['user/peserta/print/(:any)']                        = 'User/PesertaController/print/$1';
 
 $route['profile/edit']                                      = 'ProfileController/edit';
 $route['profile/update']                                    = 'ProfileController/update';

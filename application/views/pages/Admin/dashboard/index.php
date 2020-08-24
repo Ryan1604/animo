@@ -9,15 +9,29 @@ $this->load->view('dist/_partials/header', $data);
 		<div class="section-body">
 			<div class="row">
 				<div class="col-12">
-					<div class="card">
-						<?php
-						$no = 1;
-						foreach ($admin as $data) : ?>
-							<div class="card-body">
-								<img src="<?= base_url('assets/img/setting/') . $data->img ?>" alt="" style="margin-top: 20px;margin-left: 20px;" width="1100px">
-								<p style="margin-top: 20px;margin-left:20px;text-align: justify;text-indent: 60px;"><?= $data->desc ?></p>
-							</div>
-						<?php endforeach; ?>
+					<div class="card" style="margin-top: 100px;">
+						<div class="card-body">
+							<form method="post" class="needs-validation" action="<?php echo site_url('admin/peserta/find') ?>" novalidate="">
+								<div class="row">
+									<div class="col-12 col-md-3 col-lg-3">
+									</div>
+									<div class="col-12 col-md-3 col-lg-3">
+										<div class="form-group">
+											<label for="no">No Animo <sup class="text-danger">*</sup></label>
+											<input type="text" class="form-control" name="no" id="no" required>
+										</div>
+									</div>
+									<div class="col-12 col-md-3 col-lg-3">
+										<div class="form-group" style="margin-top: 30px;">
+											<button type="submit" class="btn btn-primary" tabindex="4">
+												<i class="fa fa-search"></i>
+												Cari
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

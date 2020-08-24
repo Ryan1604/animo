@@ -11,11 +11,10 @@ class Pdf extends TCPDF
 
     public function Header()
     {
-
         $this->SetY(15);
         $table = "<table align=\"center\">
         <tr>
-            <td><h1>Laporan Setoran Restribusi</h1></td>
+            <td><h1>Data Peserta</h1></td>
         </tr>
         </table>";
         $this->writeHTML($table, true, false, false, false, '');

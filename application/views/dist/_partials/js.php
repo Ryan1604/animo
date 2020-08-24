@@ -31,57 +31,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <script>
   $(document).ready(function() {
-    $('#example').dataTable({
-      "bPaginate": true,
-      "bLengthChange": false,
-      "bFilter": true,
-      "bInfo": false,
-      "bAutoWidth": false
-    });
-  });
-</script>
-
-<script>
-  $(document).ready(function() {
-    $('#laporan').DataTable({
+    $('#example').DataTable({
       dom: 'Bfrtip',
-      buttons: ['copy', 'csv', 'excel', 'pdf']
+      buttons: [
+        'csv', 'excel'
+      ]
     });
-  });
-</script>
-
-<script>
-  $(document).ready(function() {
-    $("#pedagang").change(function() {
-      let pedagang = $("#pedagang").val();
-      $.ajax({
-        method: "GET",
-        url: "<?= base_url('admin/setoran/search') ?>",
-        data: {
-          id_pedagang: pedagang
-        },
-        success: function(data) {
-          let j = JSON.parse(data);
-          const tempat = j['pedagang'][0].nama_tempat;
-          const result = tempat.substring(0, 1);
-          const kios = j['harga'][0].kios;
-          const los = j['harga'][0].los;
-          if (result == 'K') {
-            jumlah = kios;
-          } else {
-            jumlah = los;
-          }
-
-          console.log(result);
-          $('#alamat').val(j['pedagang'][0].alamat);
-          $('#tempat').val(j['pedagang'][0].nama_tempat);
-          $('#jumlah').val(jumlah);
-        },
-        error: function(data) {
-          alert('Error');
-        }
-      })
-    })
   });
 </script>
 

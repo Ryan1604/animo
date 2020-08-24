@@ -36,7 +36,7 @@ $this->load->view('dist/_partials/header');
                         </div>
                     </div>
                     <div class="simple-footer">
-                        Copyright &copy; Sistem Retribusi Pasar 2020
+                        Copyright &copy; Animo 2020
                     </div>
                 </div>
             </div>
