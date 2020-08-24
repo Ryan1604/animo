@@ -152,7 +152,7 @@ class PesertaController extends CI_Controller
             'title' => "Data Peserta"
         );
         $data['result']         = $this->db->query("SELECT * FROM pendaftar WHERE nomor_animo = $nomor_animo")->result();
-        $this->load->view('pages/Admin/peserta/detail.php', $data);
+        $this->load->view('pages/User/peserta/detail.php', $data);
     }
 
     public function print($nomor_animo)

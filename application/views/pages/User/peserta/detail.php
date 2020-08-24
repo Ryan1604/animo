@@ -174,15 +174,15 @@ $this->load->view('dist/_partials/header', $data);
                                         <label>Kodim/Kabupaten/Kota <sup class="text-danger">*</sup></label>
                                         <select class="form-control select2" id="kodim_kabupaten_kota" name="kodim_kabupaten_kota">
                                             <option value="" selected disabled>-- Pilih Kodim/Kabupaten/Kota --</option>
-                                            <option value="0801 PACITAN">0801 PACITAN</option>
-                                            <option value="0802 PONOROGO">0802 PONOROGO</option>
-                                            <option value="0803 MADIUN">0803 MADIUN</option>
-                                            <option value="0804 MAGETAN">0804 MAGETAN</option>
-                                            <option value="0805 NGAWI">0805 NGAWI</option>
-                                            <option value="0806 TRENGGALEK">0806 TRENGGALEK</option>
-                                            <option value="0807 TULUNG AGUNG">0807 TULUNG AGUNG</option>
-                                            <option value="0808 BLITAR">0808 BLITAR</option>
-                                            <option value="0809 NGANJUK">0809 NGANJUK</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0801 PACITAN') : echo 'selected'; ?><?php endif; ?> value="0801 PACITAN">0801 PACITAN</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0802 PONOROGO') : echo 'selected'; ?><?php endif; ?> value="0802 PONOROGO">0802 PONOROGO</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0803 MADIUN') : echo 'selected'; ?><?php endif; ?> value="0803 MADIUN">0803 MADIUN</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0804 MAGETAN') : echo 'selected'; ?><?php endif; ?> value="0804 MAGETAN">0804 MAGETAN</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0805 NGAWI') : echo 'selected'; ?><?php endif; ?> value="0805 NGAWI">0805 NGAWI</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0806 TRENGGALEK') : echo 'selected'; ?><?php endif; ?> value="0806 TRENGGALEK">0806 TRENGGALEK</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0807 TULUNG AGUNG') : echo 'selected'; ?><?php endif; ?> value="0807 TULUNG AGUNG">0807 TULUNG AGUNG</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0808 BLITAR') : echo 'selected'; ?><?php endif; ?> value="0808 BLITAR">0808 BLITAR</option>
+                                            <option <?php if ($data->kodim_kabupaten_kota == '0809 NGANJUK') : echo 'selected'; ?><?php endif; ?> value="0809 NGANJUK">0809 NGANJUK</option>
                                         </select>
                                     </div>
                                 </div>

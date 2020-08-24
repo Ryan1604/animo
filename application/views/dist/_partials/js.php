@@ -40,6 +40,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
   });
 </script>
 
+<script>
+  $(document).ready(function() {
+    $('#skhun').dataTable({
+      "bPaginate": true,
+      "bLengthChange": false,
+      "bFilter": true,
+      "bInfo": false,
+      "bAutoWidth": false
+    });
+  });
+</script>
+
 </body>
 
 </html>

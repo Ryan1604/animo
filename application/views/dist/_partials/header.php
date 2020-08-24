@@ -77,6 +77,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	if ($this->session->userdata('logged_in') == TRUE) {
 		$this->load->view('dist/_partials/layout');
 		$this->load->view('dist/_partials/sidebar');
+	} elseif ($this->uri->segment(1) == 'user') {
+		$this->load->view('dist/_partials/layout');
+		$this->load->view('dist/_partials/sidebar');
 	} ?>
 
 </head>

@@ -3,14 +3,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <div class="main-sidebar sidebar-style-2">
 	<aside id="sidebar-wrapper">
-		<div class="sidebar-brand">
-			<a href="<?php echo base_url(); ?>">
-				<font color="blue">ADMIN</font>
-			</a>
-		</div>
-		<div class="sidebar-brand sidebar-brand-sm">
-			<a href="<?php echo base_url(); ?>">SIRP</a>
-		</div>
+		<?php if ($this->session->userdata('logged_in') == TRUE) { ?>
+			<div class="sidebar-brand">
+				<a href="<?php echo base_url(); ?>">
+					<font color="blue">ADMIN</font>
+				</a>
+			</div>
+		<?php } else { ?>
+			<div class="sidebar-brand">
+				<a href="#">
+					<font color="blue">User</font>
+				</a>
+			</div>
+		<?php } ?>
 		<?php if ($this->session->userdata('role') === '1') { ?>
 			<ul class="sidebar-menu">
 				<li class="menu-header">
@@ -32,6 +37,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<span>Data Pendaftar</span>
 					</a>
 				</li>
+				<li class="dropdown <?= $this->uri->segment(2) == 'nilai' ? 'active' : ''; ?>">
+					<a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-file"></i> <span>Data Nilai</span></a>
+					<ul class="dropdown-menu">
+						<li><a class="nav-link" href="<?= base_url('admin/nilai/skhun') ?>">Nilai SKHUN</a></li>
+						<li><a class="nav-link" href="<?= base_url('admin/nilai/raport') ?>">Nilai Raport</a></li>
+					</ul>
+				</li>
 				<li class="menu-header">
 					<font color="black"></font>Setting
 				</li>
@@ -44,7 +56,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</a>
 				</li>
 			</ul>
-		<?php
-		} ?>
+		<?php } else { ?>
+			<ul class="sidebar-menu">
+				<li class="menu-header">
+					<font color="black">Dashboard </font>
+				</li>
+				<li class="<?= $this->uri->segment(2) == 'peserta' ? 'active' : ''; ?>">
+					<a class="nav-link" href="<?= base_url('user/dashboard') ?>">
+						<i class="fas fa-fire"></i>
+						<span>Dashboard</span>
+					</a>
+				</li>
+				<li class="<?= $this->uri->segment(2) == 'nilai' ? 'active' : ''; ?>">
+					<a class="nav-link" href="<?= base_url('user/nilai') ?>">
+						<i class="fas fa-fire"></i>
+						<span>Form Nilai Akhir</span>
+					</a>
+				</li>
+			</ul>
+		<?php } ?>
 	</aside>
 </div>

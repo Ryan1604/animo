@@ -66,18 +66,27 @@ $route['admin/peserta/update']                              = 'Admin/PesertaCont
 $route['admin/peserta/import']                              = 'Admin/PesertaController/import';
 $route['admin/peserta/print/(:any)']                        = 'Admin/PesertaController/print/$1';
 
+$route['admin/nilai/skhun']                                 = 'Admin/NilaiController/skhun';
+$route['admin/nilai/raport']                                = 'Admin/NilaiController/raport';
+$route['admin/nilai/download/(:any)']                       = 'Admin/NilaiController/download/$1';
+
 // ------------------------------------------------------------------------
 // User
 // ------------------------------------------------------------------------
-$route['user/dashboard']                                   = 'User/DashboardController';
+$route['user/dashboard']                                    = 'User/DashboardController';
 
-$route['user/peserta']                                     = 'User/PesertaController';
-$route['user/peserta/add']                                 = 'User/PesertaController/add';
-$route['user/peserta/find']                                = 'User/PesertaController/find';
-$route['user/peserta/detail']                              = 'User/PesertaController/detail';
-$route['user/peserta/update']                              = 'User/PesertaController/update';
-$route['user/peserta/import']                              = 'User/PesertaController/import';
-$route['user/peserta/print/(:any)']                        = 'User/PesertaController/print/$1';
+$route['user/peserta']                                      = 'User/PesertaController';
+$route['user/peserta/add']                                  = 'User/PesertaController/add';
+$route['user/peserta/find']                                 = 'User/PesertaController/find';
+$route['user/peserta/detail']                               = 'User/PesertaController/detail';
+$route['user/peserta/update']                               = 'User/PesertaController/update';
+$route['user/peserta/import']                               = 'User/PesertaController/import';
+$route['user/peserta/print/(:any)']                         = 'User/PesertaController/print/$1';
+
+$route['user/nilai']                                        = 'User/NilaiController';
+$route['user/nilai/find']                                   = 'User/NilaiController/find';
+$route['user/nilai/store']                                  = 'User/NilaiController/store';
+$route['user/nilai/raport/store']                           = 'User/NilaiController/create';
 
 $route['profile/edit']                                      = 'ProfileController/edit';
 $route['profile/update']                                    = 'ProfileController/update';
